@@ -217,3 +217,19 @@ Started GET "/posts/new" for 98.206.246.61 at 2018-11-05 01:24:43 +0000
 Processing by PostsController#new as HTML
   Rendered posts/new.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 98.206.246.61 at 2018-11-05 01:28:13 +0000
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 98.206.246.61 at 2018-11-05 01:28:24 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KhOMrvqkMyNkVL2G70xapkHu/XQ8CPTTY3RRkRZZA26xlT5tTYNauzV3kYfMF1V0ierp/jDHjBVo0qAmYkOsQQ==", "post"=>{"title"=>"post 1", "description"=>"post 1 description"}, "commit"=>"Submit Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "post 1"], ["description", "post 1 description"], ["created_at", "2018-11-05 01:28:24.306481"], ["updated_at", "2018-11-05 01:28:24.306481"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://174.138.35.103:48892/posts
+Completed 302 Found in 17ms (ActiveRecord: 2.9ms)
